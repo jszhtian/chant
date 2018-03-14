@@ -19,11 +19,16 @@ int base4096_encode(const void *data, const int length,
 
 	if (bufSize <= 0 || length <= 0 || !data || !result)
 	{
-		return 0;
+		goto done;
 	}
 
 	tmp = calloc(length + 2, 1);
 	out = calloc(size, 2);
+
+	if (!tmp || !out)
+	{
+		goto done;
+	}
 
 	memcpy(tmp, data, length);
 
