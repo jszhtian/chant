@@ -7,8 +7,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-	int base4096_encode(const void *data, const int length, uint16_t *result, int bufSize);
+	int base4096_decode(const uint16_t *data, const int length, void *result, const int bufSize);
+	int base4096_encode(const void *data, const int length, uint16_t *result, const int bufSize);
 
 #ifdef __cplusplus
 }
