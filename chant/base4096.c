@@ -34,11 +34,8 @@ int base4096_encode(const void *data, const int length,
 
 	for (i = 0; i < length; i += 3)
 	{
-		int value = *(int *)(tmp + i);
-		int v1 = (value & 0x00000FFF) >> 0;
-		int v2 = (value & 0x00FFF000) >> 12;
-		out[j++] = v1;
-		out[j++] = v2;
+		out[j++] = tmp[i] << 4 | tmp[i + 1] >> 4;
+		out[j++] = (tmp[i + 1] & 0x0F) << 8 | tmp[i + 2];
 	}
 
 	if (tail == 1)
