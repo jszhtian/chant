@@ -84,8 +84,8 @@ namespace chanttest
 			memset(output, 0, sizeof(output));
 			const char inputA[] = { 0x00 };
 			int len = base4096_encode(inputA, sizeof(inputA), output, sizeof(output));
-			const wchar_t ansA[] = { 0x000, 0xF002 };
-			Assert::AreEqual(2, len, L"len");
+			const wchar_t ansA[] = { 0x000 };
+			Assert::AreEqual(1, len, L"len");
 			Assert::AreEqual(0, memcmp(ansA, output, sizeof(ansA)), L"content");
 		}
 		TEST_METHOD(Cut_0)

@@ -37,7 +37,7 @@ int base4096_decode(const uint16_t *data, const int length,
 	{
 		if ((data[i] & PAD_FLAG) != 0)
 		{
-			j -= data[i] & PAD_MASK;
+			j -= 1;
 			break;
 		}
 		if ((i & 1) == 0)
@@ -97,7 +97,7 @@ int base4096_encode(const void *data, const int length,
 
 	if (tail == 1)
 	{
-		out[j - 1] = PAD2; // pad 2 when tail size 1
+		j -= 1; // no deed to pad when tail size 1
 	}
 	if (tail == 2)
 	{

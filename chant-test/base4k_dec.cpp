@@ -43,7 +43,7 @@ namespace chanttest
 			Assert::AreEqual(0, len, L"len");
 			Assert::AreEqual(0, memcmp(ansA, output, 0), L"content");
 		}
-		TEST_METHOD(CutC_1)
+		TEST_METHOD(CutC)
 		{
 			memset(output, 0, sizeof(output));
 			const uint16_t inputA[] = { 0x07f2, 0x022, 0x8cd, 0x594, 0xf001 };
@@ -51,15 +51,6 @@ namespace chanttest
 			const char ansA[] = { 0x7f, 0x20, 0x22, 0x8c, 0xd5 };
 			Assert::AreEqual(5, len, L"len");
 			Assert::AreEqual(0, memcmp(ansA, output, 5), L"content");
-		}
-		TEST_METHOD(CutC_2)
-		{
-			memset(output, 0, sizeof(output));
-			const uint16_t inputA[] = { 0x07f2, 0x022, 0x8cd, 0x594, 0xf002 };
-			int len = base4096_decode(inputA, 5, output, sizeof(output));
-			const char ansA[] = { 0x7f, 0x20, 0x22, 0x8c };
-			Assert::AreEqual(4, len, L"len");
-			Assert::AreEqual(0, memcmp(ansA, output, 4), L"content");
 		}
 		TEST_METHOD(CutB_0)
 		{
