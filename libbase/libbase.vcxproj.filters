@@ -15,8 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="base32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="base4096.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="base4096.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

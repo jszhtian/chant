@@ -167,8 +167,8 @@
     <ClCompile Include="base4k_enc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\chant\chant.vcxproj">
-      <Project>{27467f70-48e3-4e80-94fe-b08378b256b9}</Project>
+    <ProjectReference Include="..\libbase\libbase.vcxproj">
+      <Project>{7c886b1d-64fc-450f-b12c-67a8718d76a2}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../chant/base4096.h"
+#include "../libbase/base4096.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
